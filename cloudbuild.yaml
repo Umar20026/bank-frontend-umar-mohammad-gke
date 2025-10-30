@@ -10,9 +10,9 @@ steps:
         "-f",
         "Dockerfile-before-https-first",
         "-t",
-        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.0",
+        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.1",
         "--build-arg",
-        "REACT_APP_API_URL=http://bank-api-service:80/api/v1",
+        "REACT_APP_API_URL=http://34.135.198.185/api/v1",
         ".",
       ]
 
@@ -21,7 +21,7 @@ steps:
     args:
       [
         "push",
-        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.0",
+        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.1",
       ]
 
   #deploy to gke
@@ -32,4 +32,4 @@ steps:
       - "CLOUDSDK_CONTAINER_CLUSTER=umar-mohammad-bank-cluster"
 
 images:
-  - "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.0"
+  - "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.1"

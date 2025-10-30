@@ -14,12 +14,9 @@ spec:
     spec:
       containers:
         - name: bank-web
-          image: us-central1-docker.pkg.dev/gcp-class-14/umar-mohammad-gke-bank-repo/frontend:v1.0
+          image: us-central1-docker.pkg.dev/gcp-class-14/umar-mohammad-gke-bank-repo/frontend:v1.1
           ports:
             - containerPort: 80
-          env:
-            - name: REACT_APP_API_URL
-              value: "http://bank-api-service:80/api/v1"
 ---
 apiVersion: v1
 kind: Service
