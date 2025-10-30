@@ -10,9 +10,9 @@ steps:
         "-f",
         "Dockerfile-before-https-first",
         "-t",
-        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:latest",
+        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.0",
         "--build-arg",
-        "REACT_APP_API_URL=http://bank-api-service:80",
+        "REACT_APP_API_URL=http://bank-api-service:80/api/v1",
         ".",
       ]
 
@@ -21,7 +21,7 @@ steps:
     args:
       [
         "push",
-        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:latest",
+        "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.0",
       ]
 
   #deploy to gke
