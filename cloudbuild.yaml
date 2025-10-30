@@ -32,4 +32,4 @@ steps:
       - "CLOUDSDK_CONTAINER_CLUSTER=umar-mohammad-bank-cluster"
 
 images:
-  - "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:latest"
+  - "us-central1-docker.pkg.dev/$PROJECT_ID/umar-mohammad-gke-bank-repo/frontend:v1.0"
